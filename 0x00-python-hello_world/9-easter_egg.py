@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-i = "is"
-print(i)
+TimPeters = ("The Zen of Python\n")
+print(TimPeters)
