@@ -9,16 +9,16 @@ class Square:
         """type() function returns the type of object
         or returns a argument passes"""
         if type(size) != int:
-            """ raise a error message"""
             raise TypeError("size must be an integer")
         elif size < 0:
-            """ raise a error message"""
             raise ValueError("size must be >= 0")
         else:
-            """Access class Attributes using objects
-        use . notation to access the attributes"""
             self.__size = size
             """instance method always has self as an argument"""
     def area(self):
-        """returns the current square area"""
+        """returns the current square area
+
+        Return:
+            square area.
+        """
         return(self.__size * self.__size)
