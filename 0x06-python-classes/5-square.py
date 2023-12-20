@@ -11,18 +11,23 @@ class Square:
         Args:
             size: the size of the new square."""
         self.__size = size
+
     def size(self):
         """The size() method, get or set the current size."""
         return self.__size
+
     def size(self, value):
-        if type(size) != 0:
+        """ size must integer, size is not less than 0"""
+        if (type(size) != int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
     def area(self):
         """Return area of the square"""
         return self.__size * self.__size
+
     def my_print(self):
         """The size() method, get or set the current size.
         f size is equal to 0, print an empty line.
@@ -33,8 +38,8 @@ class Square:
             i = 0
             for i in range(self.__size):
                 j = 0
-                while j < self.__size:
+                for j in range(self.__size):
                     j = j + 1
-                    print("#", end=" ")
+                    print("#", end="")
                 i = i + 1
                 print('')

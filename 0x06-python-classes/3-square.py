@@ -21,6 +21,6 @@ class Square:
             """instance method always has self as an argument"""
     def area(self):
         """returns the current square area
-        Return square area.
+        Return: square area.
         """
         return(self.__size * self.__size)
