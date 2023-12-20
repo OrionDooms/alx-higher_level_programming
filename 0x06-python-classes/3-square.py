@@ -7,7 +7,11 @@ class Square:
     """ a classes built in __init__() function"""
     def __init__(self, size=0):
         """type() function returns the type of object
-        or returns a argument passes"""
+        or returns a argument passes
+        Args:
+            self: The first parameter.
+            size: The second parameter.
+            """
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
