@@ -5,7 +5,6 @@
 
 class Square:
     """ square class defined"""
-
     def __init__(self, size=0):
         """initialize the assigned values to object property
 
@@ -22,7 +21,7 @@ class Square:
         """size must be an integer, otherwise raise a TypeError.
         if size is less than 0, raise a ValueError
         """
-        if not isinstance(value, int):
+        if (type(value) != int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
