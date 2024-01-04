@@ -1,7 +1,15 @@
 #!/usr/bin/python3
+"""Nqueens print the solutions in a specific order.
+"""
 import sys
 
+
 def nqueens(N):
+    """Nqueens print the solutions in a specific order.
+
+    args:
+        N (int): the argument that create a Matrix.
+    """
     num = int(N)
     """if type(num) != int:
         print("N must be a number\n")
