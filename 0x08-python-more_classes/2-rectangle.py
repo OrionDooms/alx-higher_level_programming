@@ -4,6 +4,16 @@
 
 class Rectangle:
     """ defines of rectangle"""
+    def __init__(self, width=0, height=0):
+        """Initialize of rectangle
+
+        Args:
+        height (int): the height of the rectangle.
+        width (int): the width of the rectangle.
+        """
+        self.height = height
+        self.width = width
+
     def width(self):
         """get the width of rectangle."""
         return self.__width
@@ -30,12 +40,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self._height = value
 
-    def __init__(self, width=0, height=0):
-        """Initialize of rectangle
+    def area(self):
+        """Return the area"""
+        return (self.width * self.height)
 
-        Args:
-        height (int): the height of the rectangle.
-        width (int): the width of the rectangle.
-        """
-        self.height = height
-        self.width = width
+    def perimeter(self):
+        """Return the perimeter"""
+        if self.width == 0:
+            return (0)
+        return (2 * (self.width + self.height))
