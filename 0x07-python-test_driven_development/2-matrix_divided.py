@@ -8,11 +8,11 @@ def matrix_divided(matrix, div):
     Divides all element of a matrix by a given div.
 
     Parameters:
-    matrix: Lists of integers or floats.
-    div: The number to divide each element by.
+        matrix: Lists of integers or floats.
+        div: The number to divide each element by.
 
     Return:
-    return a new matrix list with all element divide.
+        return a new matrix list with all element divide.
     """
     if type(div) != int and type(div) != float:
         raise TypeError("div must be a number")

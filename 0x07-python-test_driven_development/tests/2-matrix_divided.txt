@@ -1,0 +1,32 @@
+"""1. Divide a matrix
+def matrix_divided(matrix, div): a function that divides all elements of a matrix
+"""
+
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+>>> matrix_divided([[1, 2, 3],[4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+#matrix must be a list of lists of integers or floats
+>>> matrix_divided([[1, "two", 3],[4, 5, 6]], 4)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+#Each row of the matrix must be of the same size
+>>> matrix_divided([[1, 2, 3],[4, 5, 6, 7]], 4)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+#div must be a number
+>>> matrix_divided([[1, 2, 3],[4, 5, 6]], "five")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+#div can’t be equal to 0
+>>> matrix_divided([[1, 2, 3],[4, 5, 6]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
