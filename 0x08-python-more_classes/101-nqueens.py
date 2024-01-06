@@ -18,7 +18,6 @@ def nqueens(N):
         print("N must be at least 4\n")
         sys.exit(1)
     else:
-        result = []
         matrix = [[i * num + j + 1 for j in range(num)] for i in range(num)]
 
         for num in matrix:
