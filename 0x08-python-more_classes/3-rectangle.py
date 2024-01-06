@@ -53,7 +53,12 @@ class Rectangle:
         return (2 * (self.width + self.height))
 
     def __str__(self):
+        """prints out a rectangle shape"""
         string = ""
+        if self.width == 0:
+            return (0)
+        if self.height == 0:
+            return (0)
         for i in range(self.height):
             for j in range(self.width):
                 print("#", end="")
