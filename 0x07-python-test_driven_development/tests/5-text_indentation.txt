@@ -1,0 +1,20 @@
+"""Text indentation
+def text_indentation(text):
+prints a text with 2 new lines after each of these characters: ., ? and :
+"""
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text_indentation("What Is The Difference Between Grace and Mercy?")
+What Is The Difference Between Grace and Mercy?
+
+>>> text_indentation("One day, he challenged the tortoise to a race.")
+One day, he challenged the tortoise to a race.
+
+>>> text_indentation("Moral of the story:")
+Moral of the story:
+
+>>> text_indentation(100)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
