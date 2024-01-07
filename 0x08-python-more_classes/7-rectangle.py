@@ -6,7 +6,7 @@ class Rectangle:
     """ defines of rectangle"""
     number_of_instances = 0
 
-    def __init__(self, width=0, height=0, print_symbol="#"):
+    def __init__(self, width=0, height=0):
         """Iinitialize of rectangle
 
         Args:
@@ -16,7 +16,7 @@ class Rectangle:
             """
         self.height = height
         self.width = width
-        self.print_symbol = print_symbol
+        self.print_symbol = "#"
         Rectangle.number_of_instances += 1
 
     def width(self):
