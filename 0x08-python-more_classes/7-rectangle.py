@@ -61,9 +61,9 @@ class Rectangle:
         """prints out a rectangle shape"""
         string = ""
         if self.width == 0:
-            return (0)
+            return ("")
         if self.height == 0:
-            return (0)
+            return ("")
         for i in range(self.height):
             for j in range(self.width):
                 print(self.print_symbol, end="")
