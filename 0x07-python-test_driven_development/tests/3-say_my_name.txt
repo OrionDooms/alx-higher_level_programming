@@ -1,0 +1,16 @@
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+>>> say_my_name("Adam", "Smith")
+My name is Adam Smith
+
+>>> say_my_name("William")
+My name is William
+
+>>> say_my_name("", "Smith")
+My name is Smith
+
+>>> say_my_name("William", "")
+My name is William
+
+>>> say_my_name("", "")
+My name is
