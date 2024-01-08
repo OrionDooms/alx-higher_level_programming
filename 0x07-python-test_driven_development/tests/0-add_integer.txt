@@ -21,7 +21,7 @@ def add_integer(a, b=98): a function that adds 2 integers.
 """a and b must be integers or floats"""
 
 >>> add_integer(None)
-Traceback (most recent call last):
+Traceback(most recent call last):
 ...
 TypeError: a must be an integer
 
