@@ -3,6 +3,10 @@
 
 
 def write_file(filename="", text=""):
-    """The function overwrite the content of the file"""
+    """The function overwrite the content of the file.
+    Args:
+        filename (int): takes in a file.
+        text (int): take in string.
+        """
     with open(filename, mode="w", encoding='utf-8') as f:
         f.write(text)
