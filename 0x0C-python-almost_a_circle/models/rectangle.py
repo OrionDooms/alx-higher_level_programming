@@ -4,8 +4,18 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """Rectangle that inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """initialize for rectangle.
+        Args:
+            width (int): Takes in width of the rectangle.
+            height (int):Takes in heigh of the rectangle..
+            x (int): Takes in x value.
+            y (int): Takes in x value..
+            id: comes from base class that count how many time
+            the programs been used.
+            """
         self.__width = width
         self.__height = height
         self.__x = x
@@ -14,6 +24,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width set the width of the rectangle"""
         return self.__width
 
     @width.setter
@@ -26,6 +37,7 @@ class Rectangle(Base):
             self.__width = value
 
     @property
+    """height set the height of the rectangle"""
     def height(self):
         return self.__height
 
@@ -78,6 +90,4 @@ class Rectangle(Base):
     def __str__(self):
         """__str__ method returns [Rectangle] (id) x/y - width/height"""
         return ("[Rectangle] ({}) {}/{} - {}/{}"
-                .format(self.id, self.__x,
-                    self.__y, self.__width,
-                    self.__height))
+                .format(self.id, self.__x, self.__y, self.__width, self.__height))
