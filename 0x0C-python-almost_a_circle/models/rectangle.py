@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 """Define Rectangle class"""
 from models.base import Base
 
@@ -85,6 +84,9 @@ class Rectangle(Base):
     def display(self):
         """Display function prints a stdout Rectangle
         with the character #"""
+        for i in range(self.__x):
+            print("" * self.__y, end="")
+            print()
         for i in range(self.__height):
             print("#" * self.__width, end="")
             print()
@@ -96,7 +98,7 @@ class Rectangle(Base):
 
     def update(self, *args):
         for arg in args:
-            self.__id = arg
+            self.__id = arg[]
             self.__width = arg
             self.__height = arg
             self.__x = arg
