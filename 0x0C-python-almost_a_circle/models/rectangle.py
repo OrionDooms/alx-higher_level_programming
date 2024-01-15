@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+import sys
 """Define Rectangle class"""
 from models.base import Base
+
 
 
 class Rectangle(Base):
@@ -91,3 +93,11 @@ class Rectangle(Base):
         """__str__ method returns [Rectangle] (id) x/y - width/height"""
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args):
+        for arg in args:
+            self.__id = arg
+            self.__width = arg
+            self.__height = arg
+            self.__x = arg
+            self.__y = arg
