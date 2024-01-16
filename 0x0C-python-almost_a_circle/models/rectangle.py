@@ -98,7 +98,7 @@ class Rectangle(Base):
 
     def update(self, *args):
         for arg in args:
-            self.__id = arg[]
+            self.__id = arg
             self.__width = arg
             self.__height = arg
             self.__x = arg
