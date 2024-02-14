@@ -1,5 +1,4 @@
---creates the table force_name on the MySQL serve.
-CREATE TABLE IF NOT EXISTS `id_not_null`(
-        id INT DEFAULT 1,
-	name VARCHAR(256),
-	PRIMARY KEY (id));
+-- Creates the table force_name on the MySQL serve.
+CREATE TABLE IF NOT EXISTS id_not_null(
+	`id` INT DEFAULT 1,
+	`name` VARCHAR(256));
