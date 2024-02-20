@@ -1,3 +1,4 @@
 --A script that prints the full description of the table first_table
 USE hbtn_0c_0;
-DESC `first_table`;
+SELECT * FROM first_table;
+DESC first_table;
