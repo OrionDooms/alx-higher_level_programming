@@ -1,6 +1,2 @@
 #!/usr/bin/node
-Class Rectangle{
-	constructor(){
-	}
-}
-
+class Rectangle{}
