@@ -10,4 +10,6 @@ if (process.argv[2] !== undefined) {
     ++i;
     console.log(a);
   }
+} else {
+  console.log('Missing size');
 }
