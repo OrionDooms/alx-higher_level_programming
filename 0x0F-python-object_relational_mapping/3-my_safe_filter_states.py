@@ -13,6 +13,7 @@ if __name__ == "__main__":
     PW = sys.argv[2]
     BASE = sys.argv[3]
     arg = sys.argv[4]
+    arg = arg.replace("'", "''")
     db = MySQLdb.connect(host=LH, port=PT, user=UN, passwd=PW, db=BASE)
     cur = db.cursor()
     """
