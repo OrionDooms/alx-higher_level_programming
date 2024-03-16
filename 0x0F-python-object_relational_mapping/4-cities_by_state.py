@@ -12,9 +12,11 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host=LH, port=PT, user=U, passwd=PW, db=BASE)
     cur = db.cursor()
     """Execute select from cities and cities.id in ascending order"""
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON states.id=cities.state_id ORDER BY cities.id ASC")
+    cur.execute("""SELECT cities.id, cities.name, states.name FROM
+            cities INNER JOIN states ON states.id=cities.state_id
+            ORDER BY cities.id ASC""")
     rows = cur.fetchall()
     for row in rows:
         print(row)
     cur.close()
-    db.close() 
+    db.close()
