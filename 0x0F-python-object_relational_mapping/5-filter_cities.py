@@ -19,10 +19,10 @@ if __name__ == "__main__":
     Execute select from table, find the name that matches the one
     from the argument.
     """
-    cur.execute("""SELECT cities.name FROM cities INNER JOIN states
+    cur.execute("""SELECT DISTINCT cities.name FROM cities INNER JOIN states
     ON states.id = cities.state_id WHERE states.name='{}'""".format(arg,))
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    """for row in range(len(rows)):"""
+    print(rows, end=" ", "\n");
     cur.close()
     db.close()
