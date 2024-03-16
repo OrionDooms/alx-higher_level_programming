@@ -23,6 +23,6 @@ if __name__ == "__main__":
     ON states.id = cities.state_id WHERE states.name='{}'""".format(arg,))
     rows = cur.fetchall()
     """for row in range(len(rows)):"""
-    print(rows, end=" ", "\n");
+    print(*rows, sep=", ");
     cur.close()
     db.close()
