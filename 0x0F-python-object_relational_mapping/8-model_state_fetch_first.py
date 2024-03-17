@@ -2,17 +2,25 @@
 """
 A python file that contains the class definition of a State
 """
-
-from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
-Base = declarative_base()
 import sys
 if __name__ == "__main__":
-    engine = database_url = "mysql+pymysql://{}:{}@localhost:3306/{}".format(sys.argv[1], sys,argv[2], sys.argv[3]
-    Base.matadata.create_all(engine)
+    UN = sys.argv[1]
+    PW = sys.argv[2]
+    BASE = sys.argv[3]
+    DB = ("mysql+mysqldb://{}:{}@localhost:3306/{}".format(UN, PW, BASE))
+    engine = create_engine(DB)
     session = sessionmaker(bind=engine)
     session = session()
-    all_user = session.query(States).all()
-    print(all_user)
+    states = session.query(State).all()
+
+    if states:
+        S = states[0];
+        print(S.id, S.name, sep=": ");
+    else:
+        print('\n');
+
+    session.close()
