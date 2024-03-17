@@ -18,9 +18,9 @@ if __name__ == "__main__":
     states = session.query(State).all()
 
     if states:
-        S = states[0];
-        print(S.id, S.name, sep=": ");
+        S = states[0]
+        print(S.id, S.name, sep=": ")
     else:
-        print('\n');
+        print('\n')
 
     session.close()
