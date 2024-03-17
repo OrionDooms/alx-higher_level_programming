@@ -15,11 +15,10 @@ if __name__ == "__main__":
     engine = create_engine(DB)
     session = sessionmaker(bind=engine)
     session = session()
-    states = session.query(State).all()
+    states = session.query(State).first()
 
-    if states:
-        S = states[0]
-        print(S.id, S.name, sep=": ")
+    if states not None:
+        print(states.id, states.name, sep=": ")
     else:
         print('Nothing')
 

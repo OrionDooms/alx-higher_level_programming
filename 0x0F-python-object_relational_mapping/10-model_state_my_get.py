@@ -15,15 +15,13 @@ if __name__ == "__main__":
     engine = create_engine(DB)
     session = sessionmaker(bind=engine)
     session = session()
-    states = session.query(State).all()
 
     name = sys.argv[4]
-    for S in states:
-        if S.name == name:
-            result = S.id
-            break
-        else:
-            result = "Not found"
+    states = session.query(State).filter(name == State.name)
+    try:
+        result = states[0].id
+    except IndexError:
+        result = "Not found"
     print(result)
 
     session.close()
