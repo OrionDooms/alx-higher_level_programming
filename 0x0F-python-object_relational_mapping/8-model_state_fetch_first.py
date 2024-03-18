@@ -13,6 +13,8 @@ if __name__ == "__main__":
     BASE = sys.argv[3]
     DB = ("mysql+mysqldb://{}:{}@localhost:3306/{}".format(UN, PW, BASE))
     engine = create_engine(DB)
+    Base.metadata.create_all(engine)
+
     session = sessionmaker(bind=engine)
     session = session()
     states = session.query(State).first()
