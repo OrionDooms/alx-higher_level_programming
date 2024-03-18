@@ -2,7 +2,7 @@
 """
 A python file that contains the class definition of a State
 """
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
@@ -19,4 +19,6 @@ if __name__ == "__main__":
     S = State(name="Louisiana")
     session.add(S)
     session.commit()
+    last_id = session.query(func.max(State.id)).scalar()
+    print(last_id)
     session.close()
