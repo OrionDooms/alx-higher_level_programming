@@ -2,7 +2,9 @@
 """A Python script that fetches well using urllib to display the
 content of a website
 """
-def fetch_status():
+
+
+def html_status():
     import urllib.request
     url = 'https://alx-intranet.hbtn.io/status'
     with urllib.request.urlopen(url) as response:
@@ -12,5 +14,6 @@ def fetch_status():
         print('\t- content: {}'.format(html))
         print('\t- utf8 content: {}'.format(html.decode('utf-8')))
 
+
 if __name__ == "__main__":
-    fetch_status()
+    html_status()
