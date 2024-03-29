@@ -10,7 +10,7 @@ import sys
 
 def html_request_x(url):
     response = requests.get(url)
-    x = response.headers["X-Request-Id"]
+    x = response.headers.get("X-Request-Id")
     print(x)
 
 
