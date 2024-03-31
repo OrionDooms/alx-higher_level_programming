@@ -1,0 +1,2 @@
+The big O notation for a algorithm that finds a peak in a list of unsorted integers
+O(n)
